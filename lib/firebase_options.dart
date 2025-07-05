@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -40,8 +41,8 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDg8ZcpULGwT6i08Cg1wIqAlXg6_wluFw4',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: dotenv.env['GOOGLE_API_KEY1']!,
     appId: '1:554062702542:web:37634f9f8e23cc0a922d9f',
     messagingSenderId: '554062702542',
     projectId: 'fdsv-6be45',
@@ -50,16 +51,16 @@ class DefaultFirebaseOptions {
     measurementId: 'G-5ZJEG1WNCY',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAJk2oPbgRWBrdXBCgXjqfQRGPUvi-TFdo',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env['GOOGLE_API_KEY1']!,
     appId: '1:554062702542:android:ce56d7ccfe3a0140922d9f',
     messagingSenderId: '554062702542',
     projectId: 'fdsv-6be45',
     storageBucket: 'fdsv-6be45.firebasestorage.app',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDu4_edYNNjtAr237lB9C-gdGKTbcK1gSg',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env['GOOGLE_API_KEY2']!,
     appId: '1:554062702542:ios:d4d6b56cb4a9bc5c922d9f',
     messagingSenderId: '554062702542',
     projectId: 'fdsv-6be45',
@@ -67,8 +68,8 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.kollibry',
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDu4_edYNNjtAr237lB9C-gdGKTbcK1gSg',
+  static FirebaseOptions macos = FirebaseOptions(
+    apiKey: dotenv.env['GOOGLE_API_KEY3']!,
     appId: '1:554062702542:ios:d4d6b56cb4a9bc5c922d9f',
     messagingSenderId: '554062702542',
     projectId: 'fdsv-6be45',
@@ -76,8 +77,8 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.kollibry',
   );
 
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDg8ZcpULGwT6i08Cg1wIqAlXg6_wluFw4',
+  static FirebaseOptions windows = FirebaseOptions(
+    apiKey: dotenv.env['GOOGLE_API_KEY1']!,
     appId: '1:554062702542:web:18cb623d9a4c5e15922d9f',
     messagingSenderId: '554062702542',
     projectId: 'fdsv-6be45',
